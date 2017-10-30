@@ -1,0 +1,128 @@
+.bg-image{
+    background-image: url("./images/Background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+.web-image-row{
+    text-align: center;
+    margin-top: 8em;
+    overflow: hidden;
+}
+.web-image{
+    border-radius: 50%;
+    height: 17em;
+    box-shadow: 1px 1px 10px black;
+    transition: all 0.5s;
+    animation-duration: 1s;
+    animation-name: web-image;
+}
+@keyframes web-image{
+    from{
+        transform: translateY(-20em);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(none);
+        opacity: 1;
+    }
+}
+.todo-heading{
+    text-align: center;
+    color: #2abe8b;
+    font-family: georgia;
+    transition: all 0.5s;
+    animation-duration: 1s;
+    animation-name: todo-heading;
+    text-shadow: 2px 2px 5px black;
+}
+@keyframes todo-heading{
+    from{
+        transform: translateY(5em);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(none);
+        opacity: 1;
+    }
+}
+.input-group{
+    text-align: center;
+    width: 14em;
+    margin: 1em auto;
+    position: relative;
+    color: #2abe8b;    
+    font-size: 18px; 
+}
+input{
+    border: none;
+    display: block;
+    padding:10px 10px 10px 5px;
+    margin: 0.5em auto;
+    background-color: transparent;
+    border-bottom:1px solid #757575;
+}
+input:focus{ 
+    outline:none; 
+}
+label{
+    position: absolute;
+    font-weight: normal;
+    left: 10px;
+    top: 15px;
+    transition:0.2s ease all;
+    pointer-events:none;
+}
+input:focus ~ label, input:valid ~ label{
+    top: -10px;
+    font-size: 14px;
+    color:#5264AE;
+}
+.bar{ 
+    position:relative; 
+    display:block;
+}
+.bar:before, .bar:after{
+    content:'';
+    height:2px; 
+    width:0;
+    bottom:1px; 
+    position:absolute;
+    background:#5264AE; 
+    transition:0.2s ease all; 
+    top: -10px;
+}
+.bar:before {
+    left:50%;
+}
+.bar:after {
+    right:50%; 
+}
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width:50%;
+}
+.highlight {
+    position:absolute;
+    height:60%; 
+    width: 0%; 
+    top:25%; 
+    left:0;
+    opacity:0.5;
+    z-index: -10;
+}
+input:focus ~ .highlight {
+    animation:inputHighlighter 0.5s ease;
+    z-index: auto;
+    animation-fill-mode: forwards;
+}
+@keyframes inputHighlighter {
+    from  { 
+        background:#5264AE; 
+    }
+    to  { 
+        width:100%; 
+        background:transparent; 
+    }
+}
