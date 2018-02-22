@@ -42,7 +42,7 @@
             </div>
             <div class="col-xs-2"></div>
             <div class="col-xs-5">
-                <button class="Todobtn TodobtnClear">
+                <button onclick="clearAll()" class="Todobtn TodobtnClear">
                     Clear List
                 </button>
             </div>
@@ -55,21 +55,6 @@
         <div class="row list">
             <div class="col-xs-1 col-xl-5 col-md-3 col-sm-2"></div>
             <div class="col-xs-10 col-xl-2 col-md-6 col-sm-8" id="mainContainer">
-                <div class="eachTodoContainer">
-                    <span class="TodoContent">A quick brown fox jumps over the lazy dog. A quick brown fox jumps over the lazy dog. A quick brown fox jumps over the lazydog. A quick brown fox jumps over the lazy dog.</span>
-                    <span class="glyphicon glyphicon-pencil"></span>
-                    <span class="glyphicon glyphicon-trash"></span>
-                </div>
-                <div class="eachTodoContainer">
-                    <span class="TodoContent">A quick brown fox jumps over the lazy dog.</span>
-                    <span class="glyphicon glyphicon-pencil"></span>
-                    <span class="glyphicon glyphicon-trash"></span>
-                </div>
-                <div class="eachTodoContainer">
-                    <span class="TodoContent">A quick brown fox jumps over the lazy dog. A quick brown fox jumps over the lazy dog.</span>
-                    <span class="glyphicon glyphicon-pencil"></span>
-                    <span class="glyphicon glyphicon-trash"></span>
-                </div>
             </div>
             <div class="col-xs-1 col-xl-5 col-md-3 col-sm-2"></div>
         </div>
@@ -80,12 +65,9 @@
             <div class="col-md-4 col-sm-4 col-xs-8 EditContainer">
                 <h1>Edit</h1>
                 <textarea>
-                    A quick brown fox jumps over the lazy dog. 
-                    A quick brown fox jumps over the lazy dog. 
-                    A quick brown fox jumps over the lazy dog. 
-                    A quick brown fox jumps over the lazy dog.
+                    
                 </textarea>
-                <button class="btn">Ok</button>
+                <button class="btn" onclick="Edit()">Ok</button>
                 <button class="btn" onclick="cancelEdit()">Cancel</button>
             </div>
             <div class="col-md-4 col-sm-4 col-xs-2"></div>

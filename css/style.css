@@ -128,7 +128,6 @@ input:focus ~ .highlight {
     }
 }
 .Todobtn{
-    outline: none;
     color: white;
     border: 1px solid #2abe8b;
     padding: 0.5em 1em;
